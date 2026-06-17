@@ -8,7 +8,7 @@ const app = express();
 app.get('/', (req, res) => res.send('Bot chal raha hai'));
 app.listen(process.env.PORT || 3000);
 
-const genAI = new GoogleGenerativeAI('TUMHARI_GEMINI_API_KEY_YAHAN');
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const client = new Client({
     authStrategy: new LocalAuth(),
